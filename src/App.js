@@ -8,6 +8,7 @@ import { PhotoDate } from './components/PhotoDate';
 import { Title } from './components/Title';
 
 const apiKey = '0T7g7WYSUw4zezlzMYFTNDgOYldC5fpY3dGvix03';
+const photoOfTheDayApi = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
 function App() {
   const [mediaUrl, setImage] = useState('');
@@ -23,9 +24,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(
-        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${dateQuery}`
-      )
+      .get(`${photoOfTheDayApi}&date=${dateQuery}`)
       .then(res => {
         setTitle(res.data.title);
         setDate(res.data.date);
