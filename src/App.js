@@ -43,9 +43,11 @@ function App() {
       <div className="header-container">
         <h1>NASA Photo Of The Day</h1>
       </div>
-      <Title title={title} />
       <InputDate handleDateChange={handleDateChange} dateQuery={dateQuery} />
-      <PhotoDate date={date} />
+      <div className="info-container">
+        <Title title={title} />
+        <PhotoDate date={date} />
+      </div>
       <MediaUrl mediaUrl={mediaUrl} mediaType={mediaType} />
       <Explanation explanation={explanation} />
     </div>
