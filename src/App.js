@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { MediaUrl } from './MediaUrl';
-import { Explanation } from './Explanation';
-import { PhotoDate } from './PhotoDate';
-import { Title } from './Title';
+import { MediaUrl } from './components/MediaUrl';
+import { Explanation } from './components/Explanation';
+import { PhotoDate } from './components/PhotoDate';
+import { Title } from './components/Title';
 
 const axios = require('axios');
 
