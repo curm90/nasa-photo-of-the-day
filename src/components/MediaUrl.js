@@ -1,9 +1,21 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import styled from 'styled-components';
 
-export const MediaUrl = ({ mediaUrl, mediaType }) => {
+const StyledMediaContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    box-shadow: 1px 2px 1px #353434;
+    border-radius: 0.5px;
+  }
+`;
+
+const MediaUrl = ({ mediaUrl, mediaType }) => {
   return (
-    <div>
+    <StyledMediaContainer>
       {mediaType === 'video' ? (
         <ReactPlayer
           className="media-video media"
@@ -17,6 +29,8 @@ export const MediaUrl = ({ mediaUrl, mediaType }) => {
           alt="A NASA pic of the day"
         />
       )}
-    </div>
+    </StyledMediaContainer>
   );
 };
+
+export default MediaUrl;
